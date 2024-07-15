@@ -43,6 +43,19 @@ main{
 main>section{
   margin-top: 130px;
 }
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.fact-name{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 
 /* header styles */
 .bg-light {
@@ -95,10 +108,12 @@ main>section{
 }
 .banner-image{
   width: 100%;
+  margin-bottom: 85px;
 }
 
 /* teams and features styles */
 .teams{
+  margin: 0 auto;
   align-items: center;
   gap: 72px;
 }
@@ -107,15 +122,13 @@ main>section{
   grid-template-columns: repeat(2,1fr);
   gap: 24px;
 }
-.features-title{
-  font-size: 2.8rem;
-  font-weight: 700;
-}
+
 .title-color{
   color: rgb(255, 144, 14);
 }
 .our-features{
   max-width: 530px;
+  margin-left: 20px;
 }
 #quick-list{
   font-weight: 500;
@@ -123,7 +136,21 @@ main>section{
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links{
+  .navbar, 
+  .nav-links,
+  .teams
+  {
     flex-direction: column;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (min-width:576px) and (max-width:992px) {
+  .teams{
+    flex-direction: column;
+  }
+  .our-features{
+    margin: 50px auto;
   }
 }
